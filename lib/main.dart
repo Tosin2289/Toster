@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:toster/pages/homepage.dart';
+
+import 'package:toster/utils.dart';
+import 'package:zego_zimkit/services/services.dart';
+
+import 'auth/loginpage.dart';
 
 void main() {
+  ZIMKit().init(appID: Utils.id, appSign: Utils.Signin);
   runApp(const MyApp());
 }
 
@@ -13,10 +18,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(useMaterial3: true,
+      theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: const Homepage(),
+      home: LoginPage(),
     );
   }
 }

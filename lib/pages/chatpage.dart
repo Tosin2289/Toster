@@ -1,8 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zego_zimkit/services/services.dart';
+import 'package:zego_zimkit/utils/dialogs_utils.dart';
 
-class ChatPage extends StatelessWidget {
+class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
 
+  @override
+  State<ChatPage> createState() => _ChatPageState();
+}
+
+class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,8 +22,61 @@ class ChatPage extends StatelessWidget {
               leading: const CircleAvatar(
                 radius: 100,
               ),
-              title: const Text("Chats"),
-              actions: const [Icon(Icons.search), Icon(Icons.more_vert)],
+              title: Text(
+                "Chats".toUpperCase(),
+                style:
+                    const TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+              ),
+              actions: [
+                PopupMenuButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  position: PopupMenuPosition.under,
+                  itemBuilder: (context) {
+                    return [
+                      PopupMenuItem(
+                          value: "New Chat",
+                          child: ListTile(
+                            leading: const Icon(
+                              CupertinoIcons.chat_bubble_2,
+                            ),
+                            title: const Text(
+                              "New Chat",
+                              maxLines: 1,
+                            ),
+                            onTap: () =>
+                                ZIMKit().showDefaultNewGroupChatDialog(context),
+                          )),
+                      PopupMenuItem(
+                          value: "New Group",
+                          child: ListTile(
+                            leading: const Icon(
+                              CupertinoIcons.chat_bubble_2,
+                            ),
+                            title: const Text(
+                              "New Group Chat",
+                              maxLines: 1,
+                            ),
+                            onTap: () =>
+                                ZIMKit().showDefaultNewGroupChatDialog(context),
+                          )),
+                      PopupMenuItem(
+                          value: "Join Group",
+                          child: ListTile(
+                            leading: const Icon(
+                              CupertinoIcons.chat_bubble_2,
+                            ),
+                            title: const Text(
+                              "Join Group Chat",
+                              maxLines: 1,
+                            ),
+                            onTap: () =>
+                                ZIMKit().showDefaultJoinGroupDialog(context),
+                          )),
+                    ];
+                  },
+                )
+              ],
             )
           ],
         ),
