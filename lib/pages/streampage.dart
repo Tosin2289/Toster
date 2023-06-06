@@ -6,7 +6,9 @@ class StreamPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange,
+      child: Center(
+        child: Text("Stream Page"),
+      ),
     );
   }
 }
