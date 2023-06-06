@@ -5,9 +5,17 @@ class StreamPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text("Stream Page"),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              title: const Text("Stream"),
+              actions: const [Icon(Icons.search), Icon(Icons.more_vert)],
+            )
+          ],
+        ),
       ),
     );
   }

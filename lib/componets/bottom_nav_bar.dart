@@ -50,28 +50,28 @@ class MyBottomNavBar extends StatelessWidget {
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/bubble-chat.png",
-                            height: 40,
+                            height: 35,
                           ),
                           label: 'chat'),
                       BottomNavigationBarItem(
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/video.png",
-                            height: 40,
+                            height: 35,
                           ),
                           label: 'Video Call'),
                       BottomNavigationBarItem(
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/voice-message.png",
-                            height: 40,
+                            height: 35,
                           ),
                           label: 'Voice Call'),
                       BottomNavigationBarItem(
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/radio.png",
-                            height: 40,
+                            height: 35,
                           ),
                           label: 'Stream'),
                     ]),

@@ -5,9 +5,20 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text("ChatPAGE"),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar.large(
+              leading: const CircleAvatar(
+                radius: 100,
+              ),
+              title: const Text("Chats"),
+              actions: const [Icon(Icons.search), Icon(Icons.more_vert)],
+            )
+          ],
+        ),
       ),
     );
   }
