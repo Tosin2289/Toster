@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zego_zimkit/compnents/conversation_list.dart';
+import 'package:zego_zimkit/pages/message_list_page.dart';
 import 'package:zego_zimkit/services/services.dart';
 import 'package:zego_zimkit/utils/dialogs_utils.dart';
 
@@ -11,6 +13,8 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
+  final user = ZIMKit().currentUser();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +55,7 @@ class _ChatPageState extends State<ChatPage> {
                           value: "New Group",
                           child: ListTile(
                             leading: const Icon(
-                              CupertinoIcons.chat_bubble_2,
+                              CupertinoIcons.person_2_fill,
                             ),
                             title: const Text(
                               "New Group Chat",
@@ -64,7 +68,7 @@ class _ChatPageState extends State<ChatPage> {
                           value: "Join Group",
                           child: ListTile(
                             leading: const Icon(
-                              CupertinoIcons.chat_bubble_2,
+                              Icons.group_add,
                             ),
                             title: const Text(
                               "Join Group Chat",
@@ -75,8 +79,22 @@ class _ChatPageState extends State<ChatPage> {
                           )),
                     ];
                   },
-                )
+                ),
               ],
+            ),
+            SliverToBoxAdapter(
+              child: ZIMKitConversationListView(
+                onPressed: (context, conversation, defaultAction) {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return ZIMKitMessageListPage(
+                        conversationID: conversation.id,
+                        conversationType: conversation.type,
+                      );
+                    },
+                  ));
+                },
+              ),
             )
           ],
         ),
