@@ -41,7 +41,7 @@ class MyBottomNavBar extends StatelessWidget {
                 child: BottomNavigationBar(
                     elevation: 0,
                     unselectedItemColor: Colors.grey,
-                    selectedItemColor: Colors.black,
+                    selectedItemColor: Colors.white,
                     onTap: onTap,
                     currentIndex: currentIndex,
                     backgroundColor: Colors.transparent,
@@ -50,6 +50,7 @@ class MyBottomNavBar extends StatelessWidget {
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/bubble-chat.png",
+                            color: Colors.white,
                             height: 35,
                           ),
                           label: 'chat'),
@@ -57,6 +58,7 @@ class MyBottomNavBar extends StatelessWidget {
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/video.png",
+                            color: Colors.white,
                             height: 35,
                           ),
                           label: 'Video Call'),
@@ -64,6 +66,7 @@ class MyBottomNavBar extends StatelessWidget {
                           backgroundColor: Colors.transparent,
                           icon: Image.asset(
                             "assets/voice-message.png",
+                            color: Colors.white,
                             height: 35,
                           ),
                           label: 'Voice Call'),
@@ -71,6 +74,7 @@ class MyBottomNavBar extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         icon: Image.asset(
                           "assets/radio.png",
+                          color: Colors.white,
                           height: 35,
                         ),
                         label: 'Stream',

@@ -13,13 +13,15 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final userID = TextEditingController();
   final username = TextEditingController();
+  static String name = '';
+  static String userid = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(16.0),
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 colors: [Colors.deepPurpleAccent, Colors.deepPurple])),
         child: Column(
@@ -34,6 +36,9 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 100.0),
             TextField(
+              onChanged: (value) {
+                name = value;
+              },
               controller: username,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.all(16.0),
@@ -62,6 +67,9 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 10.0),
             TextField(
+              onChanged: (value) {
+                userid = value;
+              },
               cursorColor: Colors.white,
               controller: userID,
               decoration: InputDecoration(

@@ -13,7 +13,8 @@ class ChatPage extends StatefulWidget {
 }
 
 class _ChatPageState extends State<ChatPage> {
-  final user = ZIMKit().currentUser();
+  final user = ZIMKit().currentUser()!.baseInfo.userName;
+  final userid = ZIMKit().currentUser()!.baseInfo.userID;
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +26,15 @@ class _ChatPageState extends State<ChatPage> {
           slivers: [
             SliverAppBar.large(
               backgroundColor: Colors.deepPurple[200],
-              leading: const CircleAvatar(
-                child: Icon(
-                  Icons.person_2,
-                  size: 30,
-                  color: Colors.white,
+              leading: CircleAvatar(
+                radius: 30,
+                child: Text(
+                  user[0].toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.deepPurple),
                 ),
-                radius: 100,
               ),
               title: Text(
                 "Chats".toUpperCase(),

@@ -4,6 +4,8 @@ import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
 import 'package:zego_uikit_signaling_plugin/zego_uikit_signaling_plugin.dart';
 import 'dart:math';
 
+import 'package:zego_zimkit/services/services.dart';
+
 class VideocallPage extends StatefulWidget {
   const VideocallPage({Key? key}) : super(key: key);
 
@@ -25,10 +27,11 @@ class _VideocallPageState extends State<VideocallPage> {
               backgroundColor: Colors.deepPurple[200],
               title: Text(
                 "Video call".toUpperCase(),
-                style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+                style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white),
               ),
-              actions: const [Icon(Icons.search), Icon(Icons.more_vert)],
             ),
             SliverToBoxAdapter(
               child: Center(
@@ -79,7 +82,10 @@ class _VideocallPageState extends State<VideocallPage> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0)),
                         ),
-                        child: Text("Join".toUpperCase()),
+                        child: Text(
+                          "Join".toUpperCase(),
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(
                             builder: (context) {
@@ -111,8 +117,8 @@ class CallPage extends StatelessWidget {
             appID: Utils.id,
             appSign: Utils.Signin,
             callID: CallID,
-            userID: 'user_id',
-            userName: 'user_name',
+            userID: ZIMKit().currentUser()!.baseInfo.userName,
+            userName: ZIMKit().currentUser()!.baseInfo.userName,
             config: ZegoUIKitPrebuiltCallConfig.oneOnOneVideoCall()
               ..onOnlySelfInRoom = (context) {
                 Navigator.of(context).pop();

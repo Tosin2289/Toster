@@ -41,6 +41,7 @@ dependencies:
   firebase_core: ^2.13.1
   firebase_auth: ^4.6.2
   cloud_firestore: ^4.8.0
+  zego_uikit_prebuilt_live_audio_room: ^2.4.14
 
 dev_dependencies:
   flutter_test:

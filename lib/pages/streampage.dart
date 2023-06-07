@@ -15,8 +15,10 @@ class StreamPage extends StatelessWidget {
               backgroundColor: Colors.deepPurple[200],
               title: Text(
                 "Stream".toUpperCase(),
-                style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+                style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white),
               ),
               actions: const [Icon(Icons.search), Icon(Icons.more_vert)],
             )
