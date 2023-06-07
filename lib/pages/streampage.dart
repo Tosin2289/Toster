@@ -27,7 +27,7 @@ class _StreamPageState extends State<StreamPage> {
                 style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w800,
-                    color: Colors.white),
+                    color: Colors.black),
               ),
             ),
             SliverToBoxAdapter(
@@ -50,9 +50,9 @@ class _StreamPageState extends State<StreamPage> {
                           padding:
                               const EdgeInsets.only(top: 16.0, bottom: 16.0),
                           margin: const EdgeInsets.only(right: 8.0),
-                          decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
+                          decoration: BoxDecoration(
+                              color: Colors.deepPurple[100],
+                              borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(30.0),
                                   bottomLeft: Radius.circular(30.0),
                                   topRight: Radius.circular(30.0),
@@ -77,7 +77,7 @@ class _StreamPageState extends State<StreamPage> {
                     width: 250,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
+                        backgroundColor: Colors.deepPurple[100],
                         foregroundColor: Colors.deepPurple,
                         padding: const EdgeInsets.all(20.0),
                         shape: RoundedRectangleBorder(
@@ -106,7 +106,7 @@ class _StreamPageState extends State<StreamPage> {
                     width: 250,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
+                        backgroundColor: Colors.deepPurple[100],
                         foregroundColor: Colors.deepPurple,
                         padding: const EdgeInsets.all(20.0),
                         shape: RoundedRectangleBorder(

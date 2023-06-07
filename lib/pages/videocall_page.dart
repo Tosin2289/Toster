@@ -30,7 +30,7 @@ class _VideocallPageState extends State<VideocallPage> {
                 style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w800,
-                    color: Colors.white),
+                    color: Colors.black),
               ),
             ),
             SliverToBoxAdapter(
@@ -60,9 +60,9 @@ class _VideocallPageState extends State<VideocallPage> {
                                     padding: const EdgeInsets.only(
                                         top: 16.0, bottom: 16.0),
                                     margin: const EdgeInsets.only(right: 8.0),
-                                    decoration: const BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.only(
+                                    decoration: BoxDecoration(
+                                        color: Colors.deepPurple.shade100,
+                                        borderRadius: const BorderRadius.only(
                                             topLeft: Radius.circular(30.0),
                                             bottomLeft: Radius.circular(30.0),
                                             topRight: Radius.circular(30.0),
@@ -88,14 +88,14 @@ class _VideocallPageState extends State<VideocallPage> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
+                              backgroundColor: Colors.deepPurple[100],
                               foregroundColor: Colors.deepPurple,
                               padding: const EdgeInsets.all(20.0),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0)),
                             ),
                             child: Text(
-                              "Join".toUpperCase(),
+                              "Call".toUpperCase(),
                               style:
                                   const TextStyle(fontWeight: FontWeight.bold),
                             ),
