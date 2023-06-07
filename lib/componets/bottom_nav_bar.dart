@@ -68,12 +68,13 @@ class MyBottomNavBar extends StatelessWidget {
                           ),
                           label: 'Voice Call'),
                       BottomNavigationBarItem(
-                          backgroundColor: Colors.transparent,
-                          icon: Image.asset(
-                            "assets/radio.png",
-                            height: 35,
-                          ),
-                          label: 'Stream'),
+                        backgroundColor: Colors.transparent,
+                        icon: Image.asset(
+                          "assets/radio.png",
+                          height: 35,
+                        ),
+                        label: 'Stream',
+                      ),
                     ]),
               ),
             ],

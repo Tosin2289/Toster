@@ -18,21 +18,31 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple[200],
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: [
             SliverAppBar.large(
+              backgroundColor: Colors.deepPurple[200],
               leading: const CircleAvatar(
+                child: Icon(
+                  Icons.person_2,
+                  size: 30,
+                  color: Colors.white,
+                ),
                 radius: 100,
               ),
               title: Text(
                 "Chats".toUpperCase(),
-                style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+                style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white),
               ),
               actions: [
                 PopupMenuButton(
+                  color: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                   position: PopupMenuPosition.under,
@@ -49,7 +59,7 @@ class _ChatPageState extends State<ChatPage> {
                               maxLines: 1,
                             ),
                             onTap: () =>
-                                ZIMKit().showDefaultNewGroupChatDialog(context),
+                                ZIMKit().showDefaultNewPeerChatDialog(context),
                           )),
                       PopupMenuItem(
                           value: "New Group",
@@ -97,6 +107,21 @@ class _ChatPageState extends State<ChatPage> {
               ),
             )
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        shape: const StadiumBorder(),
+        backgroundColor: Colors.deepPurple,
+        onPressed: () {
+          ZIMKit().showDefaultNewPeerChatDialog(context);
+        },
+        label: const Text(
+          "New Chat",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        icon: const Icon(
+          Icons.add,
+          color: Colors.white,
         ),
       ),
     );

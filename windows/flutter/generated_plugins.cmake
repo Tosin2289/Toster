@@ -3,7 +3,10 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  audioplayers_windows
+  firebase_core
   permission_handler_windows
+  zego_express_engine
   zego_zim
 )
 

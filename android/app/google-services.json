@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "211403058336",
+    "project_id": "toster-ea3a1",
+    "storage_bucket": "toster-ea3a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211403058336:android:1b72210bf061d6a78fedc5",
+        "android_client_info": {
+          "package_name": "com.example.toster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211403058336-9ja1nuslm6cp0ktrtf85p50gdd68gndc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm4p6CUsysTxMtCbvo7zjvODpoJXPufQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211403058336-9ja1nuslm6cp0ktrtf85p50gdd68gndc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

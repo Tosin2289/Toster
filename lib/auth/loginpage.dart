@@ -19,9 +19,9 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         padding: const EdgeInsets.all(16.0),
         height: double.infinity,
-        decoration: const BoxDecoration(
-            gradient:
-                LinearGradient(colors: [Colors.lightGreen, Colors.green])),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [Colors.deepPurpleAccent, Colors.deepPurple])),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                             bottomRight: Radius.circular(10.0))),
                     child: const Icon(
                       Icons.person,
-                      color: Colors.lightGreen,
+                      color: Colors.deepPurple,
                     )),
                 hintText: "Username",
                 hintStyle: const TextStyle(color: Colors.white54),
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                             bottomRight: Radius.circular(10.0))),
                     child: const Icon(
                       Icons.lock,
-                      color: Colors.lightGreen,
+                      color: Colors.deepPurple,
                     )),
                 hintText: "User ID",
                 hintStyle: const TextStyle(color: Colors.white54),
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-                  foregroundColor: Colors.lightGreen,
+                  foregroundColor: Colors.deepPurple,
                   padding: const EdgeInsets.all(20.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
