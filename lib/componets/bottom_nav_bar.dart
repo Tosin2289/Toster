@@ -12,12 +12,15 @@ class MyBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 25),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 10.0,
+        vertical: 10,
+      ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
         child: Container(
           width: MediaQuery.of(context).size.width * .8,
-          height: 100,
+          height: 60,
           color: Colors.transparent,
           child: Stack(
             children: [
@@ -51,7 +54,7 @@ class MyBottomNavBar extends StatelessWidget {
                           icon: Image.asset(
                             "assets/bubble-chat.png",
                             color: Colors.black,
-                            height: 35,
+                            height: 25,
                           ),
                           label: 'chat'),
                       BottomNavigationBarItem(
@@ -59,7 +62,7 @@ class MyBottomNavBar extends StatelessWidget {
                           icon: Image.asset(
                             "assets/video.png",
                             color: Colors.black,
-                            height: 35,
+                            height: 25,
                           ),
                           label: 'Video Call'),
                       BottomNavigationBarItem(
@@ -67,7 +70,7 @@ class MyBottomNavBar extends StatelessWidget {
                           icon: Image.asset(
                             "assets/voice-message.png",
                             color: Colors.black,
-                            height: 35,
+                            height: 25,
                           ),
                           label: 'Voice Call'),
                       BottomNavigationBarItem(
@@ -75,7 +78,7 @@ class MyBottomNavBar extends StatelessWidget {
                         icon: Image.asset(
                           "assets/radio.png",
                           color: Colors.black,
-                          height: 35,
+                          height: 25,
                         ),
                         label: 'Stream',
                       ),
