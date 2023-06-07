@@ -942,18 +942,18 @@ packages:
     dependency: transitive
     description:
       name: zego_plugin_adapter
-      sha256: "6c9930f0796eb4a97b17e556a64e975f113934daa0cfae32a90d9638bd72cb1c"
+      sha256: "8229f782c095c679e10074de256b3afed96add0a2897a5579adbc3c4d0f050a3"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.5"
+    version: "2.3.0"
   zego_uikit:
     dependency: transitive
     description:
       name: zego_uikit
-      sha256: "1dac44bd3b59073fe1744c3cbf879114266779534858388790005884805d8d5f"
+      sha256: db7693b5625801bd5ce8aeda69851a297aaf7433ea27b11004b5ce460493ddaf
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.13"
+    version: "2.5.16"
   zego_uikit_prebuilt_call:
     dependency: "direct main"
     description:
@@ -970,6 +970,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.14"
+  zego_uikit_prebuilt_live_streaming:
+    dependency: "direct main"
+    description:
+      name: zego_uikit_prebuilt_live_streaming
+      sha256: e807065cd1b2d9d4e3b6433e5188afc25bc905d80cc6221162595f0b37ffad88
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.10.2"
+  zego_uikit_prebuilt_video_conference:
+    dependency: "direct main"
+    description:
+      name: zego_uikit_prebuilt_video_conference
+      sha256: d7c8b8318c20fca4bc2d7c6bda4f73c21f6777bcb03a1a24c39176eed8632c3c
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.10"
   zego_uikit_signaling_plugin:
     dependency: "direct main"
     description:

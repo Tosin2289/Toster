@@ -42,6 +42,8 @@ dependencies:
   firebase_auth: ^4.6.2
   cloud_firestore: ^4.8.0
   zego_uikit_prebuilt_live_audio_room: ^2.4.14
+  zego_uikit_prebuilt_live_streaming: ^2.10.2
+  zego_uikit_prebuilt_video_conference: ^2.2.10
 
 dev_dependencies:
   flutter_test:

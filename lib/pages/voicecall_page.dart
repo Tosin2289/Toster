@@ -23,7 +23,7 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
             SliverAppBar(
               backgroundColor: Colors.deepPurple[200],
               title: Text(
-                "Live Audio".toUpperCase(),
+                " Audio Room".toUpperCase(),
                 style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w800,
@@ -33,6 +33,14 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
             SliverToBoxAdapter(
               child: Column(
                 children: [
+                  Image.asset(
+                    "assets/voice-message.png",
+                    height: 200,
+                    color: Colors.deepPurple,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   TextField(
                     controller: roomid,
                     decoration: InputDecoration(
