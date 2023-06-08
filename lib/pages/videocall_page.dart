@@ -72,7 +72,7 @@ class _VideocallPageState extends State<VideocallPage> {
                                       Icons.person,
                                       color: Colors.deepPurple,
                                     )),
-                                hintText: "Join a Call By ID",
+                                hintText: "Enter a Call By ID",
                                 hintStyle:
                                     const TextStyle(color: Colors.white54),
                                 border: OutlineInputBorder(
