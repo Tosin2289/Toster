@@ -24,19 +24,27 @@ class _ChatPageState extends State<ChatPage> {
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
           elevation: 0,
-          flexibleSpace: FlexibleSpaceBar(),
           backgroundColor: Colors.deepPurple[200],
           leading: Padding(
             padding: const EdgeInsets.all(2.0),
-            child: CircleAvatar(
-              backgroundColor: Colors.deepPurple[100],
-              radius: 30,
-              child: Text(
-                user[0].toUpperCase(),
-                style: const TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.deepPurple),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ProfilePage(user: user, id: userid);
+                  },
+                ));
+              },
+              child: CircleAvatar(
+                backgroundColor: Colors.deepPurple[100],
+                radius: 30,
+                child: Text(
+                  user[0].toUpperCase(),
+                  style: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.deepPurple),
+                ),
               ),
             ),
           ),
@@ -123,6 +131,77 @@ class _ChatPageState extends State<ChatPage> {
             Icons.add,
             color: Colors.black,
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  final String user;
+  final String id;
+  const ProfilePage({Key? key, required this.user, required this.id})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              user[0].toUpperCase(),
+              style: const TextStyle(
+                  fontSize: 120,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.deepPurple),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Logged in has : ',
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
+                ),
+                Text(
+                  user,
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'ID:  ',
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
+                ),
+                SelectableText(
+                  id,
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
