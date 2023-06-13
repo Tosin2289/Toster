@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
   }
 
   navigatetohome() async {
-    await Future.delayed(const Duration(milliseconds: 1500), (() {}));
+    await Future.delayed(const Duration(milliseconds: 3500), (() {}));
     Navigator.pushReplacement(context, MaterialPageRoute(builder: ((Context) {
       return const LoginPage();
     })));
@@ -26,7 +26,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Center(
           child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -39,15 +39,16 @@ class _SplashState extends State<Splash> {
                 Text(
                   "TOSTER".toUpperCase(),
                   style: const TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 60.0,
                       fontWeight: FontWeight.bold),
                 ),
               ],
             ),
             ShaderMask(
-              shaderCallback: (bounds) => const LinearGradient(
-                  colors: [Colors.white, Colors.deepPurple]).createShader(
+              shaderCallback: (bounds) =>
+                  const LinearGradient(colors: [Colors.white, Colors.black])
+                      .createShader(
                 Rect.fromLTWH(0, 0, bounds.width, bounds.height),
               ),
               child: const Text(

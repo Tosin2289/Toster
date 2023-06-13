@@ -21,18 +21,14 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         padding: const EdgeInsets.all(16.0),
         height: double.infinity,
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.deepPurpleAccent, Colors.deepPurple])),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               "TOSTER".toUpperCase(),
               style: const TextStyle(
-                  color: Colors.white70,
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.bold),
+                  color: Colors.black, fontSize: 40.0, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 100.0),
             TextField(
@@ -46,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
                     margin: const EdgeInsets.only(right: 8.0),
                     decoration: const BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.black,
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30.0),
                             bottomLeft: Radius.circular(30.0),
@@ -54,15 +50,15 @@ class _LoginPageState extends State<LoginPage> {
                             bottomRight: Radius.circular(10.0))),
                     child: const Icon(
                       Icons.person,
-                      color: Colors.deepPurple,
+                      color: Colors.white,
                     )),
                 hintText: "Username",
-                hintStyle: const TextStyle(color: Colors.white54),
+                hintStyle: const TextStyle(color: Colors.black),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0),
                     borderSide: BorderSide.none),
                 filled: true,
-                fillColor: Colors.white.withOpacity(0.1),
+                fillColor: Colors.grey[200],
               ),
             ),
             const SizedBox(height: 10.0),
@@ -70,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
               onChanged: (value) {
                 userid = value;
               },
-              cursorColor: Colors.white,
+              cursorColor: Colors.black,
               controller: userID,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.all(16.0),
@@ -78,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
                     margin: const EdgeInsets.only(right: 8.0),
                     decoration: const BoxDecoration(
-                        color: Colors.white,
+                        color: Colors.black,
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30.0),
                             bottomLeft: Radius.circular(30.0),
@@ -86,15 +82,15 @@ class _LoginPageState extends State<LoginPage> {
                             bottomRight: Radius.circular(10.0))),
                     child: const Icon(
                       Icons.lock,
-                      color: Colors.deepPurple,
+                      color: Colors.white,
                     )),
                 hintText: "User ID",
-                hintStyle: const TextStyle(color: Colors.white54),
+                hintStyle: const TextStyle(color: Colors.black),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0),
                     borderSide: BorderSide.none),
                 filled: true,
-                fillColor: Colors.white.withOpacity(0.1),
+                fillColor: Colors.grey[200],
               ),
             ),
             const SizedBox(height: 30.0),
@@ -102,8 +98,8 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.deepPurple,
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
                   padding: const EdgeInsets.all(20.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
