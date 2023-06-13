@@ -15,13 +15,13 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[200],
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-              backgroundColor: Colors.deepPurple[200],
+              backgroundColor: Colors.white,
               title: Text(
                 " Audio Room".toUpperCase(),
                 style: const TextStyle(
@@ -36,7 +36,7 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
                   Image.asset(
                     "assets/voice-message.png",
                     height: 200,
-                    color: Colors.deepPurple,
+                    color: Colors.black,
                   ),
                   const SizedBox(
                     height: 30,
@@ -50,7 +50,7 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
                               const EdgeInsets.only(top: 16.0, bottom: 16.0),
                           margin: const EdgeInsets.only(right: 8.0),
                           decoration: BoxDecoration(
-                              color: Colors.deepPurple[100],
+                              color: Colors.black,
                               borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(30.0),
                                   bottomLeft: Radius.circular(30.0),
@@ -58,15 +58,15 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
                                   bottomRight: Radius.circular(10.0))),
                           child: const Icon(
                             Icons.person,
-                            color: Colors.deepPurple,
+                            color: Colors.white,
                           )),
                       hintText: "Room ID",
-                      hintStyle: const TextStyle(color: Colors.white54),
+                      hintStyle: const TextStyle(color: Colors.black),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30.0),
                           borderSide: BorderSide.none),
                       filled: true,
-                      fillColor: Colors.white.withOpacity(0.1),
+                      fillColor: Colors.grey[200],
                     ),
                   ),
                   const SizedBox(
@@ -79,8 +79,8 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
                         width: 150,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.deepPurple[100],
-                            foregroundColor: Colors.deepPurple,
+                            backgroundColor: Colors.black,
+                            foregroundColor: Colors.white,
                             padding: const EdgeInsets.all(20.0),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0)),
@@ -105,8 +105,8 @@ class _VoiceCallPageState extends State<VoiceCallPage> {
                         width: 150,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.deepPurple[100],
-                            foregroundColor: Colors.deepPurple,
+                            backgroundColor: Colors.black,
+                            foregroundColor: Colors.white,
                             padding: const EdgeInsets.all(20.0),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0)),

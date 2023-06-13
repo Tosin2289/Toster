@@ -18,13 +18,13 @@ class _VideocallPageState extends State<VideocallPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[200],
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-              backgroundColor: Colors.deepPurple[200],
+              backgroundColor: Colors.white,
               title: Text(
                 "Video call".toUpperCase(),
                 style: const TextStyle(
@@ -42,7 +42,7 @@ class _VideocallPageState extends State<VideocallPage> {
                       Image.asset(
                         "assets/video.png",
                         height: 200,
-                        color: Colors.deepPurple,
+                        color: Colors.black,
                       ),
                       const SizedBox(
                         height: 20,
@@ -61,7 +61,7 @@ class _VideocallPageState extends State<VideocallPage> {
                                         top: 16.0, bottom: 16.0),
                                     margin: const EdgeInsets.only(right: 8.0),
                                     decoration: BoxDecoration(
-                                        color: Colors.deepPurple.shade100,
+                                        color: Colors.black,
                                         borderRadius: const BorderRadius.only(
                                             topLeft: Radius.circular(30.0),
                                             bottomLeft: Radius.circular(30.0),
@@ -70,16 +70,16 @@ class _VideocallPageState extends State<VideocallPage> {
                                                 Radius.circular(10.0))),
                                     child: const Icon(
                                       Icons.person,
-                                      color: Colors.deepPurple,
+                                      color: Colors.white,
                                     )),
                                 hintText: "Enter a Call By ID",
                                 hintStyle:
-                                    const TextStyle(color: Colors.white54),
+                                    const TextStyle(color: Colors.black87),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(30.0),
                                     borderSide: BorderSide.none),
                                 filled: true,
-                                fillColor: Colors.white.withOpacity(0.1),
+                                fillColor: Colors.grey[200],
                               ),
                             ),
                           ),
@@ -88,8 +88,8 @@ class _VideocallPageState extends State<VideocallPage> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.deepPurple[100],
-                              foregroundColor: Colors.deepPurple,
+                              backgroundColor: Colors.black,
+                              foregroundColor: Colors.white,
                               padding: const EdgeInsets.all(20.0),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0)),

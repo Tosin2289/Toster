@@ -18,119 +18,115 @@ class _ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Scaffold(
-        appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
-          elevation: 0,
-          backgroundColor: Colors.deepPurple[200],
-          leading: Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return ProfilePage(user: user, id: userid);
-                  },
-                ));
-              },
-              child: CircleAvatar(
-                backgroundColor: Colors.deepPurple[100],
-                radius: 30,
-                child: Text(
-                  user[0].toUpperCase(),
-                  style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.deepPurple),
-                ),
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return ProfilePage(user: user, id: userid);
+                },
+              ));
+            },
+            child: CircleAvatar(
+              backgroundColor: Colors.black,
+              radius: 30,
+              child: Text(
+                user[0].toUpperCase(),
+                style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white),
               ),
             ),
           ),
-          title: Text(
-            "Chats".toUpperCase(),
-            style: const TextStyle(
-                fontSize: 30, fontWeight: FontWeight.w800, color: Colors.black),
-          ),
-          actions: [
-            PopupMenuButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)),
-              position: PopupMenuPosition.under,
-              itemBuilder: (context) {
-                return [
-                  PopupMenuItem(
-                      value: "New Chat",
-                      child: ListTile(
-                        leading: const Icon(
-                          CupertinoIcons.chat_bubble_2,
-                        ),
-                        title: const Text(
-                          "New Chat",
-                          maxLines: 1,
-                        ),
-                        onTap: () =>
-                            ZIMKit().showDefaultNewPeerChatDialog(context),
-                      )),
-                  PopupMenuItem(
-                      value: "New Group",
-                      child: ListTile(
-                        leading: const Icon(
-                          CupertinoIcons.person_2_fill,
-                        ),
-                        title: const Text(
-                          "New Group Chat",
-                          maxLines: 1,
-                        ),
-                        onTap: () =>
-                            ZIMKit().showDefaultNewGroupChatDialog(context),
-                      )),
-                  PopupMenuItem(
-                      value: "Join Group",
-                      child: ListTile(
-                        leading: const Icon(
-                          Icons.group_add,
-                        ),
-                        title: const Text(
-                          "Join Group Chat",
-                          maxLines: 1,
-                        ),
-                        onTap: () =>
-                            ZIMKit().showDefaultJoinGroupDialog(context),
-                      )),
-                ];
-              },
-            ),
-          ],
         ),
-        backgroundColor: Colors.deepPurple[200],
-        body: ZIMKitConversationListView(
-          onPressed: (context, conversation, defaultAction) {
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) {
-                return ZIMKitMessageListPage(
-                  conversationID: conversation.id,
-                  conversationType: conversation.type,
-                );
-              },
-            ));
-          },
+        title: Text(
+          "Chats".toUpperCase(),
+          style: const TextStyle(
+              fontSize: 30, fontWeight: FontWeight.w800, color: Colors.black),
         ),
-        floatingActionButton: FloatingActionButton.extended(
-          shape: const StadiumBorder(),
-          backgroundColor: Colors.deepPurple,
-          onPressed: () {
-            ZIMKit().showDefaultNewPeerChatDialog(context);
-          },
-          label: const Text(
-            "New Chat",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        actions: [
+          PopupMenuButton(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            position: PopupMenuPosition.under,
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem(
+                    value: "New Chat",
+                    child: ListTile(
+                      leading: const Icon(
+                        CupertinoIcons.chat_bubble_2,
+                      ),
+                      title: const Text(
+                        "New Chat",
+                        maxLines: 1,
+                      ),
+                      onTap: () =>
+                          ZIMKit().showDefaultNewPeerChatDialog(context),
+                    )),
+                PopupMenuItem(
+                    value: "New Group",
+                    child: ListTile(
+                      leading: const Icon(
+                        CupertinoIcons.person_2_fill,
+                      ),
+                      title: const Text(
+                        "New Group Chat",
+                        maxLines: 1,
+                      ),
+                      onTap: () =>
+                          ZIMKit().showDefaultNewGroupChatDialog(context),
+                    )),
+                PopupMenuItem(
+                    value: "Join Group",
+                    child: ListTile(
+                      leading: const Icon(
+                        Icons.group_add,
+                      ),
+                      title: const Text(
+                        "Join Group Chat",
+                        maxLines: 1,
+                      ),
+                      onTap: () => ZIMKit().showDefaultJoinGroupDialog(context),
+                    )),
+              ];
+            },
           ),
-          icon: const Icon(
-            Icons.add,
-            color: Colors.black,
-          ),
+        ],
+      ),
+      backgroundColor: Colors.white,
+      body: ZIMKitConversationListView(
+        onPressed: (context, conversation, defaultAction) {
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return ZIMKitMessageListPage(
+                conversationID: conversation.id,
+                conversationType: conversation.type,
+              );
+            },
+          ));
+        },
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        shape: const StadiumBorder(),
+        backgroundColor: Colors.black,
+        onPressed: () {
+          ZIMKit().showDefaultNewPeerChatDialog(context);
+        },
+        label: const Text(
+          "New Chat",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        icon: const Icon(
+          Icons.add,
+          color: Colors.white,
         ),
       ),
     );
@@ -155,7 +151,7 @@ class ProfilePage extends StatelessWidget {
               style: const TextStyle(
                   fontSize: 120,
                   fontWeight: FontWeight.w800,
-                  color: Colors.deepPurple),
+                  color: Colors.black),
             ),
             SizedBox(
               height: 10,

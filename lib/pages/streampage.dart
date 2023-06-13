@@ -15,13 +15,13 @@ class _StreamPageState extends State<StreamPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[200],
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-              backgroundColor: Colors.deepPurple[200],
+              backgroundColor: Colors.white,
               title: Text(
                 "Stream".toUpperCase(),
                 style: const TextStyle(
@@ -37,7 +37,7 @@ class _StreamPageState extends State<StreamPage> {
                   Image.asset(
                     "assets/radio.png",
                     height: 200,
-                    color: Colors.deepPurple,
+                    color: Colors.black,
                   ),
                   const SizedBox(
                     height: 20,
@@ -51,7 +51,7 @@ class _StreamPageState extends State<StreamPage> {
                               const EdgeInsets.only(top: 16.0, bottom: 16.0),
                           margin: const EdgeInsets.only(right: 8.0),
                           decoration: BoxDecoration(
-                              color: Colors.deepPurple[100],
+                              color: Colors.black,
                               borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(30.0),
                                   bottomLeft: Radius.circular(30.0),
@@ -59,15 +59,15 @@ class _StreamPageState extends State<StreamPage> {
                                   bottomRight: Radius.circular(10.0))),
                           child: const Icon(
                             Icons.person,
-                            color: Colors.deepPurple,
+                            color: Colors.white,
                           )),
                       hintText: "Live ID",
-                      hintStyle: const TextStyle(color: Colors.white54),
+                      hintStyle: const TextStyle(color: Colors.black),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30.0),
                           borderSide: BorderSide.none),
                       filled: true,
-                      fillColor: Colors.white.withOpacity(0.1),
+                      fillColor: Colors.grey[200],
                     ),
                   ),
                   const SizedBox(
@@ -77,8 +77,8 @@ class _StreamPageState extends State<StreamPage> {
                     width: 250,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple[100],
-                        foregroundColor: Colors.deepPurple,
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.white,
                         padding: const EdgeInsets.all(20.0),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0)),
@@ -106,8 +106,8 @@ class _StreamPageState extends State<StreamPage> {
                     width: 250,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple[100],
-                        foregroundColor: Colors.deepPurple,
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.white,
                         padding: const EdgeInsets.all(20.0),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0)),
