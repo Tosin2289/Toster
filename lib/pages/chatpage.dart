@@ -107,6 +107,8 @@ class _ChatPageState extends State<ChatPage> {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
               return ZIMKitMessageListPage(
+                inputDecoration: InputDecoration(
+                    fillColor: Colors.black, iconColor: Colors.white),
                 conversationID: conversation.id,
                 conversationType: conversation.type,
               );
