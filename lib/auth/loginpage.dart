@@ -28,7 +28,9 @@ class _LoginPageState extends State<LoginPage> {
             Text(
               "TOSTER".toUpperCase(),
               style: const TextStyle(
-                  color: Colors.black, fontSize: 40.0, fontWeight: FontWeight.bold),
+                  color: Colors.black,
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 100.0),
             TextField(
@@ -106,6 +108,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 child: Text("Login".toUpperCase()),
                 onPressed: () async {
+                  CircularProgressIndicator(
+                    color: Colors.black,
+                  );
                   await ZIMKit()
                       .connectUser(id: userID.text, name: username.text);
                   Navigator.pushReplacement(context, MaterialPageRoute(
@@ -113,6 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                       return Homepage();
                     },
                   ));
+                  Navigator.pop(context);
                 },
               ),
             ),
