@@ -46,10 +46,10 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: const BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30.0),
-                            bottomLeft: Radius.circular(30.0),
-                            topRight: Radius.circular(30.0),
-                            bottomRight: Radius.circular(10.0))),
+                            topLeft: Radius.circular(31.0),
+                            bottomLeft: Radius.circular(31.0),
+                            topRight: Radius.circular(31.0),
+                            bottomRight: Radius.circular(11.0))),
                     child: const Icon(
                       Icons.person,
                       color: Colors.white,
@@ -78,10 +78,10 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: const BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30.0),
-                            bottomLeft: Radius.circular(30.0),
-                            topRight: Radius.circular(30.0),
-                            bottomRight: Radius.circular(10.0))),
+                            topLeft: Radius.circular(31.0),
+                            bottomLeft: Radius.circular(31.0),
+                            topRight: Radius.circular(31.0),
+                            bottomRight: Radius.circular(11.0))),
                     child: const Icon(
                       Icons.lock,
                       color: Colors.white,
