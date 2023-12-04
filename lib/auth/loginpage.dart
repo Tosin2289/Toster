@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                       Icons.lock,
                       color: Colors.white,
                     )),
-                hintText: "User ID",
+                hintText: "Number",
                 hintStyle: const TextStyle(color: Colors.black),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30.0),
